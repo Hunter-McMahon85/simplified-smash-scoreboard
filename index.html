@@ -1,0 +1,48 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SSBU Scoreboard</title>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  
+  <body>
+    <div class="navbar">
+      <nav class="topnav">
+        <ul class="navitems">
+          <li><a href="index.HTML">Home</a></li>
+          <li><a href="scoreboard_and_controller/scoreboard.html">Scoreboard</a></li>
+          <li><a href="scoreboard_and_controller/controller.html">Controller</a></li>
+          <li><a href="misc/about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="title">
+        <h1>SIMPLIFIED SMASH OVERLAY</h1>
+    </div>
+    <h2>HOW TO USE</h2>
+    <div class="instructions">
+        <h3><u>Basic Setup</u></h3>
+        <ol>
+            <li>Click on Scoreboard and Controller</li>
+            <li>add the link to the scoreboard as a browser source in OBS</li>
+            <li>(optional) add the controller to OBS as a dock</li>
+        </ol>
+        <h3><u>Advanced Features</u></h3>
+        <h4>Using Start.gg Match Numbers</h4>
+        <p>NOTE: this feature may be buggy as the current code is for the local event this overlay was originally made for.<br>
+            That said, it will only work if the ultimate singles (pulling matchdata is not setup to work with doubles events yet) event is the first event listed on the 
+            "start.gg/tournaments/[event name]/event" page. 
+            If your event is not set up this way, consider checking out the source code and downloading a version to modify yourself 
+            as the scoreboard can be used via launching the html files as a live server from VS CODE.
+        </p>
+        <ol>
+            <li>Obtain a start.gg api token (these are case sensitive and should be treated as a password, this site does not save token info)</li>
+            <li>Enter the API token into the controller</li>
+            <li>in the tournament link field of the controller, enter the "/tournaments/[event name]" part of the event link</li>
+            <li>Now you can get tags from matches by simply entering the match identifier into the match number field (the match identifier is the 1-2 letters next to a set)</li>
+        </ol>
+    </div>
+
+
+  </body>
