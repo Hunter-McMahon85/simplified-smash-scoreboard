@@ -1,9 +1,12 @@
+
+
 body {
   margin: 0;
   text-align: center;
   list-style-position: inside;
   background-image: url("../images/smashball.png");
   background-size: 2%;
+  font-family: Verdana;
 }
 
 .navbar {
@@ -81,3 +84,7 @@ h2 {
   margin:2%;
  }
 
+ .instructions li {
+  padding-top: 10px ;
+ }
+ img {margin-left: 30px;}
