@@ -221,7 +221,7 @@ function set_round() {
         tag_set_data = JSON.parse(tag_set_data);
         update_tag("left", tag_set_data["set"]["slots"][0]["entrant"]["participants"][0]["gamerTag"])
         update_tag("right", tag_set_data["set"]["slots"][1]["entrant"]["participants"][0]["gamerTag"])
-        set_round(tag_set_data["set"]["fullRoundText"])
+        localStorage.setItem("rnd", tag_set_data["set"]["fullRoundText"]);
 
     }
     set_tag();
