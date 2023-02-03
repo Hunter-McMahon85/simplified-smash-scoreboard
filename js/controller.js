@@ -179,6 +179,7 @@ function fetch_and_set_tags(match_num) {
         body: JSON.stringify({
             "query": `query SetEntrants($ID: ID!) {
                 set(id: $ID) {
+                fullRoundText
                   slots {
                     entrant {
                       participants {
@@ -204,12 +205,23 @@ function fetch_and_set_tags(match_num) {
         data = JSON.stringify(data);
         return data;
     }
+    
+// updating the round
+function set_round() {
+    //getting the round
+    round = document.querySelector('#round').value.trim();
+    //setting the round
+    localStorage.setItem("rnd", round);
+    //clear the input box
+    document.querySelector("#round").value = '';
+};
 
     async function set_tag() {
         tag_set_data = await fetch_tags();
         tag_set_data = JSON.parse(tag_set_data);
         update_tag("left", tag_set_data["set"]["slots"][0]["entrant"]["participants"][0]["gamerTag"])
         update_tag("right", tag_set_data["set"]["slots"][1]["entrant"]["participants"][0]["gamerTag"])
+        set_round(tag_set_data["set"]["fullRoundText"])
 
     }
     set_tag();
@@ -226,18 +238,6 @@ function score_r() {
 function score_l() {
     left_score += 1;
     localStorage.setItem("ls", left_score);
-};
-
-
-
-// updating the round
-function set_round() {
-    //getting the round
-    round = document.querySelector('#round').value.trim();
-    //setting the round
-    localStorage.setItem("rnd", round);
-    //clear the input box
-    document.querySelector("#round").value = '';
 };
 
 // reseting shit
