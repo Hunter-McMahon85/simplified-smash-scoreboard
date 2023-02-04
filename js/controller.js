@@ -211,7 +211,7 @@ function fetch_and_set_tags(match_num) {
         tag_set_data = JSON.parse(tag_set_data);
         update_tag("left", tag_set_data["set"]["slots"][0]["entrant"]["participants"][0]["gamerTag"])
         update_tag("right", tag_set_data["set"]["slots"][1]["entrant"]["participants"][0]["gamerTag"])
-        localStorage.setItem("rnd", round);
+        localStorage.setItem("rnd", tag_set_data["set"]["fullRoundText"]);
     }
     set_tag();
     document.querySelector("#match_num").value = '';
