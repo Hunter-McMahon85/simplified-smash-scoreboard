@@ -179,7 +179,7 @@ function fetch_and_set_tags(match_num) {
         body: JSON.stringify({
             "query": `query SetEntrants($ID: ID!) {
                 set(id: $ID) {
-                fullRoundText
+                  fullRoundText
                   slots {
                     entrant {
                       participants {
@@ -211,9 +211,9 @@ function fetch_and_set_tags(match_num) {
         tag_set_data = JSON.parse(tag_set_data);
         update_tag("left", tag_set_data["set"]["slots"][0]["entrant"]["participants"][0]["gamerTag"])
         update_tag("right", tag_set_data["set"]["slots"][1]["entrant"]["participants"][0]["gamerTag"])
+        localStorage.setItem("rnd", round);
     }
     set_tag();
-    localStorage.setItem("rnd", tag_set_data["set"]["fullRoundText"]);
     document.querySelector("#match_num").value = '';
 }
 
