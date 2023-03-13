@@ -23,7 +23,7 @@ const entered_name = [
     "game & watch",
     "ganon",
     "incineroar",
-    "geninja",
+    "greninja",
     "ice climbers",
     "ike",
     "inkling",
