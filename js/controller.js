@@ -52,33 +52,43 @@ function update_score_icons(side, index) {
 
 }
 
-function update_control_icons(side) {
-    if (side == "right") {
-        index = entered_icons.indexOf(document.querySelector('#righticon').value);
-        right_icons_files = icons_filenames[index];
-        document.getElementById("r0").src = "../char_icons/" + icons_filenames[index][0];
-        document.getElementById("r1").src = "../char_icons/" + icons_filenames[index][1];
-        document.getElementById("r2").src = "../char_icons/" + icons_filenames[index][2];
-        document.getElementById("r3").src = "../char_icons/" + icons_filenames[index][3];
-        document.getElementById("r4").src = "../char_icons/" + icons_filenames[index][4];
-        document.getElementById("r5").src = "../char_icons/" + icons_filenames[index][5];
-        document.getElementById("r6").src = "../char_icons/" + icons_filenames[index][6];
-        document.getElementById("r7").src = "../char_icons/" + icons_filenames[index][7];
-        update_score_icons("right", 0)
-    } else {
-        index = entered_icons.indexOf(document.querySelector('#lefticon').value);
-        left_icons_files = icons_filenames[index];
-        document.getElementById("l0").src = "../char_icons/" + icons_filenames[index][0];
-        document.getElementById("l1").src = "../char_icons/" + icons_filenames[index][1];
-        document.getElementById("l2").src = "../char_icons/" + icons_filenames[index][2];
-        document.getElementById("l3").src = "../char_icons/" + icons_filenames[index][3];
-        document.getElementById("l4").src = "../char_icons/" + icons_filenames[index][4];
-        document.getElementById("l5").src = "../char_icons/" + icons_filenames[index][5];
-        document.getElementById("l6").src = "../char_icons/" + icons_filenames[index][6];
-        document.getElementById("l7").src = "../char_icons/" + icons_filenames[index][7];
-        update_score_icons("left", 0);
+function update_control_icons(side) 
+{
+    if (side == "right") 
+    {
+        ri = document.querySelector('#righticon').value;
+        if (entered_icons.includes(ri))
+            {
+            index = entered_icons.indexOf(ri);
+            right_icons_files = icons_filenames[index];
+            document.getElementById("r0").src = "../char_icons/" + icons_filenames[index][0];
+            document.getElementById("r1").src = "../char_icons/" + icons_filenames[index][1];
+            document.getElementById("r2").src = "../char_icons/" + icons_filenames[index][2];
+            document.getElementById("r3").src = "../char_icons/" + icons_filenames[index][3];
+            document.getElementById("r4").src = "../char_icons/" + icons_filenames[index][4];
+            document.getElementById("r5").src = "../char_icons/" + icons_filenames[index][5];
+            document.getElementById("r6").src = "../char_icons/" + icons_filenames[index][6];
+            document.getElementById("r7").src = "../char_icons/" + icons_filenames[index][7];
+            update_score_icons("right", 0)
+            }
+    } 
+    else 
+    {
+        if (entered_icons.includes(ri))
+            {
+            index = entered_icons.indexOf(document.querySelector('#lefticon').value);
+            left_icons_files = icons_filenames[index];
+            document.getElementById("l0").src = "../char_icons/" + icons_filenames[index][0];
+            document.getElementById("l1").src = "../char_icons/" + icons_filenames[index][1];
+            document.getElementById("l2").src = "../char_icons/" + icons_filenames[index][2];
+            document.getElementById("l3").src = "../char_icons/" + icons_filenames[index][3];
+            document.getElementById("l4").src = "../char_icons/" + icons_filenames[index][4];
+            document.getElementById("l5").src = "../char_icons/" + icons_filenames[index][5];
+            document.getElementById("l6").src = "../char_icons/" + icons_filenames[index][6];
+            document.getElementById("l7").src = "../char_icons/" + icons_filenames[index][7];
+            update_score_icons("left", 0);
+            }
     }
-
 }
 
 
