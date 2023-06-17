@@ -38,6 +38,11 @@
   </script>
 
   <div class="instructions">
+    <p>welcome to my Simple SSBU scoreboard overlay. I felt like other options out there were too difficult to modify
+      and were too bulky in their default configurations thus I created this web app overlay in order to create
+      something that I hope is more intuitive to use for the average Joe so thank you for giving this a looka and I hope
+      to see some more clips made from events using this overlay ;)...
+    </p>
     <h3><u>DISCLAMER</u></h3>
     <p>
       This socreboard overlay was made for my initial use case and may have some bugs depending on your use case. <br>
@@ -92,16 +97,17 @@
     <h4>Using Start.gg Match Numbers</h4>
     <p>NOTE: this feature may be buggy as the current code is for the local event this overlay was originally made
       for and is hard coded to take look for the bracket in a from a certain place (This is as i initially planed to not
-      publish this).<br>
-      That said, it will only work if the ultimate singles (pulling match data is not setup to work with doubles events
-      yet) event is the first event listed on the
-      "start.gg/tournaments/[event name]/event" page.
-      If your event is not set up this way, consider checking out the
+      publish this).<br><br>
+      That said, it will only work if the ultimate singles brackets that have no pools. If your bracket is not set up
+      this way then the controller
+      will have some trouble pulling matchup data from the start.gg API.
+      So if your event is not set up this way, please consider checking out the
       <a href="https://github.com/Hunter-McMahon85/simplified-smash-scoreboard">source code and downloading a version to
         modify yourself</a>
       as the scoreboard can be used via launching the scoreboard and controller html files as a live server directly
       from VS CODE using the
-      <a href=https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live server add on.</a>
+      <a href=https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live server add on.</a> (this
+      process is also how you can use the overlay in an offline recording environment)
     </p>
     <ol>
       <li>Obtain a <a
@@ -119,11 +125,12 @@
         </ul>
       </li>
       <li>
-        Enter the API token into the controller <br>
+        Enter your generated API token into the controller <br>
         <img src="images/token.PNG" height="500">
       </li>
       <li>
-        in the tournament link field of the controller, enter the "/tournaments/[event name]" part of the event link
+        in the tournament link field of the controller, enter the "/tournaments/[event name]" part of the event link.
+        This is the "slug" link for the tournament that the start.gg API uses to know which event to fetch data from
         <div class="brln">
           <img src="images/link_example.png">
           <br>
@@ -131,7 +138,8 @@
         </div>
       </li>
       <li>
-        Now you can get tags from matches by simply entering the match id into the match id field
+        Now you can get tags from matches by simply entering the match id into the match id field (note the images are
+        out of date and that the scoreboard now alos pulls the round name)
         <br>
         <img src="images/match.PNG">
         <br>
