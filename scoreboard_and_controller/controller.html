@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSB ScoreBoard controller</title>
+    <link rel="stylesheet" href="../css/controller.css">
+</head>
+
+<body>
+    <input id="token" placeholder="your start.gg API token"></input>
+    <button id="et">Enter Token</button>
+
+    <input id="bracket_link" placeholder="Bracket Link"></input>
+    <button id="ebl">Enter Bracket</button>
+
+    <br>
+    <p>(only enter "tournament/ [tournament name]" part of start.gg link)</p>
+    <br>
+
+    <input id="match_num" placeholder="Match ID"></input>
+    <button id="emn">Enter ID</button>
+
+    <br>
+    <br>
+
+    <input id="round" placeholder="Round Name"></input>
+    <button id="enter_round">Enter Round</button>
+
+    <br>
+    <br>
+
+
+
+    <input id="lefttag" placeholder="Left Tag"></input>
+    <button id="elt">Enter tag</button>
+
+    <br>
+    <br>
+
+
+    <div class="autocomplete" id="l" style="width:300px;">
+        <input id="lefticon" placeholder="Left Player Icon">
+    </div>
+    <button id="eli">Enter Left Icon</button>
+
+
+    <div class="left_icon_buttons">
+        <br>
+        <input id="l0" type="image" src="../char_icons/smashball.png">
+        <input id="l1" type="image" src="../char_icons/smashball.png">
+        <input id="l2" type="image" src="../char_icons/smashball.png">
+        <input id="l3" type="image" src="../char_icons/smashball.png">
+        <input id="l4" type="image" src="../char_icons/smashball.png">
+        <input id="l5" type="image" src="../char_icons/smashball.png">
+        <input id="l6" type="image" src="../char_icons/smashball.png">
+        <input id="l7" type="image" src="../char_icons/smashball.png">
+        <br>
+    </div>
+
+    <input id="righttag" placeholder="Right Tag"></input>
+    <button id="ert">Enter tag</button>
+
+    <br>
+    <br>
+
+    <div class="autocomplete" id="r" style="width:300px;">
+        <input id="righticon" placeholder="Right Player Icon">
+    </div>
+    <button id="eri">Enter Right Icon</button>
+
+    <div class="right_icon_buttons">
+        <br>
+        <input id="r0" type="image" src="../char_icons/smashball.png">
+        <input id="r1" type="image" src="../char_icons/smashball.png">
+        <input id="r2" type="image" src="../char_icons/smashball.png">
+        <input id="r3" type="image" src="../char_icons/smashball.png">
+        <input id="r4" type="image" src="../char_icons/smashball.png">
+        <input id="r5" type="image" src="../char_icons/smashball.png">
+        <input id="r6" type="image" src="../char_icons/smashball.png">
+        <input id="r7" type="image" src="../char_icons/smashball.png">
+        <br>
+    </div>
+
+    <div class="buttons">
+        <button id="winL">Win Left</button>
+        <button id="winR">Win Right</button>
+        <br>
+        <br>
+        <button id="resetscore">Reset Score</button>
+        <br>
+        <button id="resetall">Reset All</button>
+    </div>
+
+    <script src="../js/char_names.js"></script>
+    <script src="../js/controller.js"></script>
+    <script src="../js/autocomplete_text_script.js"></script>
+    <script src="../js/handleinput.js"></script>
+
+
+</body>
+</html>
