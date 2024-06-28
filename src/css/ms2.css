@@ -1,0 +1,83 @@
+@import url("https://use.typekit.net/qjx6azk.css");
+
+.ms2 {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+  overflow: hidden;
+}
+
+.mu2contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 70%;
+  background-color: #5EAE33;
+  border-radius: 25px;
+  border: white double 10px;
+  color: white;
+  overflow: hidden;
+  /* Set initial position to top of the screen */
+  /*transform: translatex(-150%);*/
+  /* Set transition for smooth animation */
+  transition: transform 1s ease-in-out;
+}
+
+.slide-right2 {
+  /* Move to the original position (0%) */
+  animation: slide 6s ease-in-out forwards;
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120%); /* Adjust this value as needed */
+  }
+}
+
+
+.vs2Text {
+  font-family: "lust-didone", serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-top: 15px;
+  margin: 0px 50px 0px 50px !important;
+  color: #fe917f;
+}
+
+.mu2VS {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mu2VS h1 {
+  display: flex;
+  flex-direction: row;
+  font-size: 64px;
+}
+
+.mu2p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
